@@ -1,0 +1,312 @@
+/* Add this to your CSS */
+.fade-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Root Variables */
+:root {
+  --background-light: #ffffff;
+  --text-light: #000000;
+  --background-dark: #1e1e1e;
+  --text-dark: #ffffff;
+  --primary-color: #090909;
+  --hover-color: #ffecec;
+  --custom-background-color: #ffffff;
+  --custom-header-color: #ffffff;
+  --custom-text-color: #000000;
+  --custom-box-background-color: #f9f9f9;
+  --custom-search-bar-background: #f0f0f0;
+  --custom-button-color: #ff5117;
+  --animation-speed: 0.3s;
+  --box-background: #f9f9f9;
+  --box-border: #e0e0e0;
+  --search-bar-background: #f0f0f0;
+  --search-bar-border: #ffffff;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color var(--animation-speed), color var(--animation-speed);
+}
+
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.custom-mode {
+  background-color: var(--custom-background-color);
+  color: var(--custom-text-color);
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--custom-header-color);
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.assistant-button,
+.whats-new-button {
+  background-color: var(--custom-button-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: var(--hover-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  margin-right: 15px;
+}
+
+.assistant-button:hover,
+.whats-new-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Dropdown Menu */
+.menu-button {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  cursor: pointer;
+  right: 20px;
+  top: 12px;
+  position: absolute;
+  
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid var(--hover-color);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu label {
+  /* display: node; */
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.dropdown-menu select,
+#bg-color-picker,
+#header-color-picker,
+#text-color-picker,
+#box-background-color-picker,
+#search-bar-background-picker,
+#button-color-picker {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Mode-Specific Images */
+.mode-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.mode-image {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+.light-mode .light-mode-image,
+.dark-mode .dark-mode-image {
+  display: block;
+}
+
+/* Main Content */
+.search-container {
+  margin: 50px auto;
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--custom-search-bar-background);
+  border: 1px solid var(--search-bar-border);
+  border-radius: 25px;
+  padding: 5px 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s ease;
+}
+
+.search-bar:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.search-actions {
+  display: flex;
+  align-items: center;
+}
+
+.voice-icon,
+.image-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: var(--text-light);
+}
+
+#search-input {
+  border: none;
+  font-size: 16px;
+  flex-grow: 1;
+  padding: 5px 10px;
+  background: none;
+  color: inherit;
+  outline: none;
+}
+
+/* More by Zenuxs Section */
+.more-by-zenuxs {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.more-by-zenuxs h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.box {
+  background: var(--custom-box-background-color);
+  border: 1px solid var(--box-border);
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+.box h3 {
+  margin: 0 0 10px;
+}
+
+.box p {
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: var(--primary-color);
+  color: rgb(255, 255, 255);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Color Picker */
+#bg-color-picker,
+#header-color-picker,
+#text-color-picker,
+#box-background-color-picker,
+#search-bar-background-picker {
+  display: none;
+}
+
+/* Developer Image in Footer */
+#developer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.developer-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.developer-image:hover {
+  transform: scale(1.1);
+}
+
+/* Fade Effect */
+.fade-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s ease;
+}

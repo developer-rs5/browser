@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenuxs Browser</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="images/zenuxs.jpg" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+      <button class="assistant-button">Assistant</button>
+      <button class="whats-new-button">What's New</button>
+
+      <div class="dropdown">
+        <button class="menu-button">⋮</button>
+        <div class="dropdown-menu">
+          <label for="mode-select">Mode</label>
+          <select id="mode-select">
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+            <!-- <option value="custom">Custom</option> -->
+          </select>
+<!-- 
+          <label for="header-color-picker" class="color-label" style="display: none;">Header Color</label>
+          <input type="color" id="header-color-picker" title="Choose Header Color" style="display: none;">
+
+          <label for="text-color-picker" class="color-label" style="display: none;">Text Color</label>
+          <input type="color" id="text-color-picker" title="Choose Text Color" style="display: none;">
+
+          <label for="box-background-color-picker" class="color-label" style="display: none;">Box Background Color</label>
+          <input type="color" id="box-background-color-picker" title="Choose Box Background Color" style="display: none;">
+
+          <label for="search-bar-background-picker" class="color-label" style="display: none;">Search Bar Background</label>
+          <input type="color" id="search-bar-background-picker" title="Choose Search Bar Background Color" style="display: none;">
+
+          <label for="background-picker" class="color-label" style="display: none;"> Background</label>
+          <input type="color" id="bg-color-picker" title="Choose Background Color" style="display: none;">
+
+          <label for="button-background-picker" class="color-label" style="display: none;">Button Background</label>
+          <input type="color" id="button-color-picker" title="Choose button Background Color" style="display: none;"> -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- <div class="mode-images">
+    <img src="images/light-mode-image.jpg" alt="Light Mode Image" class="mode-image light-mode-image">
+    <img src="images/dark-mode-image.jpg" alt="Dark Mode Image" class="mode-image dark-mode-image">
+  </div> -->
+
+  <main>
+    <div class="search-container">
+      <div class="search-bar">
+        <button class="search-icon">🔍</button>
+        <input type="text" id="search-input" placeholder="Search the web...">
+        <div class="search-actions">
+          <button id="voice-search-button" class="voice-icon">🎙️</button>
+          <button id="image-search-button" class="image-icon">🖼️</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="more-by-zenuxs">
+      <h2>More by Zenuxs</h2>
+      <div class="content-boxes">
+        <div class="box">
+          <a href="https://example.com" target="_blank">
+            <h2>Zenuxs App</h2>
+            <p>Explore our mobile app designed for seamless browsing and productivity.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://example.com" target="_blank">
+            <h3>Zenuxs AI</h3>
+            <p>Unlock the power of AI with Zenuxs' advanced assistant tools.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://example.com" target="_blank">
+            <h3>Zenuxs Developer Hub</h3>
+            <p>Access resources, APIs, and tools for developers.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://example.com" target="_blank">
+            <h3>Zenuxs Community</h3>
+            <p>Join our community to connect, learn, and share ideas.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Zenuxs. All rights reserved.</p>
+
+    <a href="https://developer-link.com" id="developer-link" target="_blank">
+      <img src="images/developer-image.jpg" alt="Developer Image" class="developer-image">
+      <p>Developed by Rishabh</p>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
